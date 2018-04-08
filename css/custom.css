@@ -192,10 +192,10 @@ a:hover {
 
 .js .content {
 	position: absolute;
-	top: 6px;
+	top: 3px;
 	left: 0;
 	width: 100%;
-	bottom: 50px;
+	bottom: 20px;
 	overflow: hidden;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
