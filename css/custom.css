@@ -169,7 +169,7 @@ a:hover {
 .menu-button {
 	z-index: 1000;
 	left: 20px;
-	top: 20px;
+	top: 96%;
 	text-indent: -9000px;
 }
 
