@@ -1,112 +1,652 @@
-<html><body>
-
-<!-- 
-
-htmldemo1.html
-
-This simple Javascript function "doDataLink(data)" sends
-the string "data" to the the executing BASIC!
-program.
-
-The BASIC command, "html.getdatalink data$", is 
-used to read linked data. If data$ is empty ("") then
-no data has been sent.  The BASIC! programmer
-can loop on this value until a non-empty string is
-returned.
-
-This function is the heart the HTML/BASIC! interactive
-interface.
--->
-
-<script type="text/javascript">
-
-    function doDataLink(data) {
-        Android.dataLink(data);
-    }
-    
-    function text(theText) {
-       var txt = document.createTextNode(theText);
-       document.getElementById('txt').appendChild(txt);
-    }
-
-</script>
-
-<!-- 
-Show some marked up text
--->
-
-<b>HTML Demo #1</b>
-<p>
-
-<!--
-Display an image located in:
-/sdcard/rfo-basic/data/
--->
-<img src="fly.gif">
-<p>
-
-<!--
-Display a hyperlink to the next Demo.
-The link file is located in
-/sdcard/rfo-basic/data/
--->
-
-<a href="htmldemo2.html">Go to Demo #2 </a>
-
-<p>
-Download the BASIC! Manual.
-<p>
-<a href="http://dl.bintray.com/rfo-basic/android/v01.78/De_Re_BASIC%21.pdf">De Re BASIC!</a>
-
-<p>
-
-<!--
-Display a button labeled "Speech to text". 
-Pressing this button
-sends a dataLink message, "STT", to BASIC!
-
-When the BASIC! program gets this message,
-it will start the voice recognition process.
-
-The BASIC! program will then insert the
-recognized text via the function
-text() above.
-
--->
-
-	<input type="button" value="Speech To Text" onClick="doDataLink('STT')" />
-	<br>
-	
-	<!--
-	The Speech To Text results will be
-	inserted here
-	-->
-	
-    <p id="txt" </p>
-	
-  
-<P>
-
-<!--
-Display a button labeled Exit Demo. Pressing this button
-send a dataLink message to BASIC!
-
-When the BASIC! program gets this message,
-it will close  HTML .
--->
-
-	<input type="button" value="Exit Demo" onClick="doDataLink('Exit')" />
-	<br>
-
-  
-<P>
-
-<!--
-Hitting the BACK key at this point  will exit html because
-this is start of the history chain
--->
-
-You can also exit the Demo by hitting the BACK key
-
-
-</body></html>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Voice-2018</title>
+      <meta name="description" content="Fullscreen Pageflip Layout with BookBlock" />
+      <meta name="keywords" content="fullscreen pageflip, booklet, layout, bookblock, jquery plugin, flipboard layout, sidebar menu" />
+      <meta name="author" content="Codrops" />
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
+      <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+      <link rel="stylesheet" type="text/css" href="css/custom.css" />
+      <script src="js/modernizr.custom.79639.js"></script>
+   </head>
+   <body>
+      <div id="container" class="container">
+         <div class="menu-panel">
+            <h3>Index</h3>
+            <div>
+            </div>
+            <ul id="menu-toc" class="menu-toc">
+               <li class="menu-toc-current"> <a href="#item1">Editorial Jottings</a>
+               <li>Message from the Chiarman</li>
+               <li><a href="#item3">Messaage from the Vice President</a></li>
+               <li><a href="#item4">Principal’s Message</a></li>
+               <li><a href="#item5">Principal</a></li>
+               <li><a href="#item6">Principal</a></li>
+               <li><a href="#item7">Principal</a></li>
+               <li><a href="#item8">Principal</a></li>
+               <li><a href="#item10">10</a></li>
+               <li><a href="#item11">Principal</a></li>
+            </ul>
+         </div>
+         <div class="bb-custom-wrapper">
+            <div id="bb-bookblock" class="bb-bookblock">
+			
+			<div class="bb-item" id="item30">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2><b>INDEX</b></h2>
+						<p>1-Editorial Jottings </p>
+                        <p>2-Message from the Chairman </p>
+						<p>3-Message from the Vice President </p>
+						<p>4-Principal’s Message </p>
+						<p>5-A Random Act of Kindness </p>
+						<p>6-Robotic Bird </p>
+						<p>7-EACH ONE TEACH ONE </p>
+						<p>8-Away from hate </p>
+						<p>9-A hustle stressful Life of Professional!! </p>
+						<p>10-Designing  of  life  by  “GOD”  in  context  with  SHRIMAD  BHAGAVAD  GITA </p>
+						<p>11-Conspiracy theory! </p>
+						<p>12-Life as we know </p>
+						<p>13-LIFE IS LIKE AN ELEVATOR…… </p>
+						<p>14-Life… </p>
+						<p>15-MOUNTAINS </p>
+						<p>16-Bridging of life and death </p>
+						<p>17-Why Reading Makes You a Better Writer </p>
+						<p>18-Real Friendship </p>
+						<p>19-RESTART </p>
+						<p>20-Rhnull, The Rarest Blood Type On Earth, Has Been Called The "Golden Blood" </p>
+						<p>21-Ride in a metro </p>
+						<p>22-Section 377 of the Indian Penal Code </p>
+						<p>23-Silence vs. Inner Peace </p>
+						<p>24-Socrates in the New World </p>
+						<p>25-TAME THE OCEAN OF MY MIND </p>
+						<p>26-THAT LAST BENCHER </p>
+						<p>27-The Big Question Mark "?" </p>
+						<p>28-wanna be a child again... </p>
+						<p>29-Warrior </p>
+						<p>30-LOVE-LIFE-Loneliness-Hatred </p>
+                     </div>
+                  </div>
+               </div>
+			
+			
+			
+			
+			   <div class="bb-item" id="item1">
+                  <div class="content">
+                     <div class="scroller">
+                        <!img src="art/raj1.png" alt="ગુરૂદેવ" align="left" style="width:100%;height:80%;">
+                        <h2>01-Editorial Jottings</h2>
+                        <p><strong>Physical or digital?</strong></p>
+                        <p>Reading habits over past centuries have evolved through a gradual transformation, thanks to the advent of information and communication technology! But regardless of the medium, a good reading culture in any nation remains to be an enviable virtue. In a recently published article from the University of Nebraska – Lincoln the readers are categorized into three types.  Early 20th century was of ‘dedicated readers’ doing page to page reading, late 20th century viewed ‘flapping readers’ with enormous availability of printed books, materials, microforms, digital resources, and web pages. These flipping readers swiftly shift, title to title without in-depth reading. The 21st century generation also known as generation Z, and the digital generation is of ‘glancing readers’, who go through highlights in multiple formats and devices. Reading from screens tends to be significantly different from reading printed text in text–saturated world of www’. Typical screen–based reading behavior emerged with ‘browsing and scanning, keyword spotting, and one–time non–linear reading. At some point it seems as if the emergence of screen reading through smart phones and tablets print literature will find itself at war with the internet. But a book is a book ….. a reassuring, feel-the-weight, take-your-own-time kind of thing...so do the magazines and  the periodicals.  The book isn't dead; technology is simply helping it evolve beyond its physical confines. We need to bridge the gap between the physical and the digital, whereby one would supplement the other.  Keeping this in mind the e-version of GCET VOICE will be made available on our website. In addition there will be an App developed by our students to reach out to all tech-savvy readers  </p>
+                        <p>The publication of 16th edition of GCET VOICE reflects and encompasses the diversity inherent to the academic and extra-curricular spaces in GCET. The magazine continues to expand its reach to achieve its vision of being a truly representative student publication.
+                           I take this opportunity to place on record my sincere appreciation and gratitude to principal and other colleagues of the publication committee and also the student members of the editorial team without whose enthusiastic support the publication would not have seen the daylight. I hope the publication of GCET VOICE will act as a spur in inculcating the talent and blossom the creativity of the young students. The team hopes to build on this ethos just as much during the upcoming academic years as well.
+                        </p>
+                        <p><strong>Dr. Kaushik Nath</strong></p>
+                        <p><strong>Convener, Publication Committee</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item2">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>02-Message from the Chairman</h2>
+                        <h2>Charutar Vidya Mandal</h2>
+                        <p>It is my pleasure to learn that GCET is publishing the 16th issue of the Annual Magazine GCET VOICE on the 22nd Annual Day. Established in the year 1996 with just two undergraduate programmes, today GCET is one of the popular destinations of engineering education in the state of Gujarat. It is the endeavour of the Charutar Vidya Mandal to make the academic like, a smooth journey full of joy and discovery.  Charutar Vidya Mandal believes in holistic education for the youth of Gujarat, encompassing – academics, co-curricular activities, sports education and life-skills learning. Our endeavor is to strike a balance between state-of-the-art infrastructure and an internationally acceptable education. We impart education that is based on conscience and we rear a breed of young minds that are bustling with self confidence, motivation and ever ready to take up challenges.</p>
+                        <p>The college magazine is a platform for the students to express their creative pursuit which develops in them originality of thought and perception. The contents of the magazine reflect the wonderful creativity of thoughts and imagination of our young students. I extend my warm wishes to the principal, staff and students of GCET to continue this journey on the road of excellence.</p>
+                        <p>I take this opportunity to congratulate the editorial team of GCET VOICE and wish that the magazine to be one of the leading periodicals of the country</p>
+                        <p><strong>Er. Bhikhubhai B.Patel</strong></p>
+                        <strong>Chairman,</strong>
+                        <strong>Charutar Vidya Mandal</strong>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item3">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>03-Message from the Vice President</h2>
+                        <h2>Charutar Vidya Mandal</h2>
+                        <p>I am happy to learn that GCET is bringing out yet one more issue of the annual magazine “GCET VOICE”.  Academic excellence along with co-curricular and extra co-curricular activities completes the process of education. And it gives me great satisfaction that GCET is progressing in all its endeavors towards the overall development and personality of the students.</p>
+                        <p>The college magazine is a platform for the students to express their creative pursuit which develops in them originality of thought and perception. The contents of the magazine reflect the wonderful creativity of thoughts and imagination of our students.</p>
+                        <p>Dear students, you are the nation-builders. You are the movers of technology. You are the agents of change. It is our fervent hope that the years that you spend in GCET would enable you to equip with leadership and managerial skills. The knowledge that you will gain, the fine qualities that you will imbibe and the technical skills that you will learn to apply will be your major contribution to your parents, to society, and to the nation.</p>
+                        <p>I convey my best wishes to all the students of GCET for a successful career with flying colors.</p>
+                        <p><strong>Shri. Manishbhai S Patel</strong></p>
+                        <strong>Vice President,Charutar Vidya Mandal</strong>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item4">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>04-Principal’s Message</h2>
+                        <p>I am pleased to know that the publication team is ready with the college’s annual magazine GCET Voice- 2018.</p>
+                        <p>The college magazine is a Mirror which showcases the activities and achievements of the institute. From the year of institute’s inception, every year we have documented all activities of the institute in form of the college Magazine named GCET VOICE. Really it is a happy moment to see that we are maintaining same tradition and publishing the college magazine for this year too. The magazine presents the glimpses of the growth of the institution on many fronts. The highly qualified and dedicated members of staff have always raised shoulders and have carried out their duties with a high level of commitment.</p>
+                        <p>GCET has excellent infrastructure facilities and is well-known for its high quality of educational standards and devoted staff members. We cannotforget the contribution made by ourwell-disciplined and responsible graduated and ongoing young students. The concrete efforts put up by the staff and students reward in terms of continuously improved national ranking of the institute year after year. Placement is another front in which the institute has made upward strides only. However, R & D and consultancy are the areas in which we still need to brace ourselves up. In the globally competitive world, we have to make ourselves better than the best. Keeping this point in mind all the stakeholders of GCET have to work smartly for the bright future of our institute.</p>
+                        <p>I take this opportunity to congratulate all the members of the editorial board of GCET VOICE and convey my best wishes to staff and students for their future endeavors.</p>
+                        <p><strong>Dr. Himanshu Soni</strong></p>
+                        <p><strong>Principal</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item5">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>05-A Random Act of Kindness…</h2>
+                        <p>Vivek Tomar</p>
+                        <p>Robert, a young aspiring entrepreneur was taking the subway to upper east Manhattan. He had to reach quickly to a meeting an agent had arranged for him with some investors. When he got down at the station he noticed a young boy with a board hanging to his neck <strong>‘Need Money For Food’.</strong> Although Robert was running late on his schedule, he went upto the boy and gave him two dollars. He observed the boy had some crayons in his pocket which he must’ve used to write down the sign board. Robert asked the boy to give him some of his crayons. The boy stared at him in surprise. Robert said “There isn’t a free lunch boy. After all we are both traders”. Saying this Robert took two of his crayons and ran to his meeting. The boy still shaken up in surprise</p>
+                        <p>The meeting went pretty well and Robert got the money he needed. Robert’s franchise boomed and twenty years down the line he became one of the leading players in his sector. One night at a corporate party, Robert received a call from his manager. One of their subsidiaries in New York was seized as the managing officer there was laundering money without Robert’s knowledge. This could cost Robert millions of dollars. Robert also realised that a consignment from the same subsidiary was due for delivery next week. He needed help, a big one. The news spread like fire in the corporate world. Two days later Robert’s secretary called him informing that a firm offering similar products and services had volunteered to help them and deliver the consignments within the deadline. The deal went through and the delivery was done.</p>
+                        <p>Robert received a memo for the deal from the firm. The contact details mentioned the owner, Daniel Peters. The transfer was made and the payment was done. The same night Robert called Daniel thanking him and asked him if he could do anything for returning the favour. Robert was astonished after listening to what Daniel had to say. He was totally speechless. Daniel said “Maybe now is a very good time for you to return my crayons sir. After all I have completed my trade”.</p>
+                        <p><strong>The world does not have many good people so if you cannot find one, be one.</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item6">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>06-Robotic Bird</h2>
+                        <p>Now-a-days robots have taken its remarkable position in the development of a nation. Robot has changed the structure of society and made available different devices for safer and comfortable condition. Various robots are developed to perform varieties of task. Researchers are taking inspiration from the nature and try to develop novel robots. Biological inspired robotics has emerged as an important area within the field of robotics. </p>
+                        <p>Since 1490, researchers are striving for the development of bird like flying device. After number of efforts by various researchers in 2011, German company Festo developed a flight model that is capable of taking off autonomously and rising in the air by means of its flapping wings alone, without the aid of other devices to provide lift. They call it as “SmartBird”. SmartBird is a low weight but powerful flight device with excellent aerodynamic qualities and extreme agility. This robotic bird is developed from inspiration of the herring gull. It can start, fly and land autonomously with no additional drive mechanism. Its wings not only beat up and down, but also twist at specific angles. This is made possible by an active articulated torsional drive, which in conjunction with a complex control system makes for unprecedented efficiency in flight operation. The robotic bird can change its direction by turning its head and torso section through apposing movements, which is synchronized by two actuating motors. Much like an airliner, the bird’s tail is actuated to provide lift and yaw movement. Smart bird developed by Festo has 0.450 kg weight, 1.07 m torso length and 2.0 m wingspan. Its structure is prepared from lightweight carbon fibre and used 7.4 V, 450 mA lithium polymer accumulator 2 cells.  It has 32 bit microcontroller @50 MHz, 64 kByte flash, 8 kByte RAM. </p>
+                        <p>Researchers at Maryland Robotics Center have also given noticeable contribution in the development of robotic bird. They made first effort during 2005-2007 for development of small robotic bird, and then during 2007-2008 they made effort for development of big bird with folding wing, and during 2009-2010 made effort for development of Jumbo Bird. In these designs there were no ways to control wing deformation by controlling wing velocity. Then series of robotic bird called Robo Raven were developed. Latest robotic bird, Raven V utilizes both wings and propellers to generate a significantly greater amount of thrust and maneuverability, allowing it to perform tighter and more controlled aerobatics, carry greater payloads, fly for longer, and do realistic soaring and gliding. Still researchers are striving for development of fully automatic, low weight robotic bird with independently controllable and programmable wings.</p>
+                        <p>This kind of low weight robotic bird can be useful to the defense, to keep watch on border. It will be helpful to inspect hazardous and remote location. It can be beneficiary for the mankind during natural disaster like flood. </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item7">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>07-'EACH ONE TEACH ONE'</h2>
+                        <p>Education is the most powerful weapon to change the world.can everyone get this weapon in their childhood when we need the most! for india it may be wrong.
+                           In eleventh report of ASER(Annual status Education Report) which is released in New Delhi,18 january 2017,Enrollment of the age group 6-14 has been 96% or above simce 2009.This proportion increased from 96.7% to 96.9% in 2017 but more than 40% of india's children drop out of elementary school and According to google 10 out of 3 ladies are educated.we can see that enrolled students are more but present in schools are very less.We can not blame all time to goverment for this.Goverment is try is best to increase literacy rate but due to the lack of awarness and people mindset it failed.Goverment hire the staff in goverment schools as per their knowledge not on their honesty and mindset.
+                        </p>
+                        <p>   Education is the only way to understand the things.Now a days goverment try to digitalize all the things.in 2017,mobile phone users expected number is 730.7 million,what about others! it means still approximately 500 million people who are not use mobile phones.This is why uneducated and unaware people are biggest obstacle for growth of india.uneducated people are harmful for everyone.Due to this kind of persons corruption occur in society.uneducated people causes more crime than educated people.GST is very good decision taking by goverment but small merchant find problems because they don't know how to access internet and what is the benifit of it that's why they may be against GST.due to the lack of awarness and low of education this kind of people be a fool by many politicians.They suffer a lot because they don't know their rights thus many other people take advantatge of it.Goverment starts many policies for them but due to unawareness they don't get.That's why poor become more poor and richer bocome more rich</p>
+                        <p>Now coming for the solution of it,Being a educated people and as a youngster our hopes are more from the goverment to develope country.In English literature there is one sentence 'HELPING HANDS ARE MORE POWERFUL THAN SPEAKING MOUTHS'.We all heard this kind of sentence uptill now and everytime we think 'what can i do?  i haven't more money to educate them'.But the money is the only way to help them.As a educated people we have most poerful weapon in our hand that is 'knowledge'.Using this weapon we can help the uneduacted people too.If we really want to do something for them then we can spend our one hour for uneduacted people and give them right knowledge and aware them for all about things.we can apply 'EACH ONE TEACH ONE' formula to do this.we can start with children because according to me 'children have better gain capacity than old age men'.in little age children minds are clear and they easily install the things but old age uneducated men has thier own negative thoghts ans mindset that's why it is very difficult to first remove the negative thoughts from their mind and then teach them.if we aware the one child then indiractly we aware the one family because that child change their mindset in a goodway then family learn from the child and change their routine accordingly.this work give us inner peace and positive thoghts.Those students which are guided by us definately in future they help another people.</p>
+                        <p><strong>ASHISH M. AHUJA</strong></p>
+                        <p><strong>EC 2nd Yearl</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item8">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>08-'Away from hate'</h2>
+                        <p>You are lost, find the gate </p>
+                        <p>Gate of success, away from hate..! </p>
+                        <p>Goal’s too high, need some wings. </p>
+                        <p>Wings of craze, to avoid useless things…! </p>
+                        <p>Competition too tough, Be the best </p>
+                        <p>Best is from practice, less time for rest..! </p>
+                        <p>Filter of their opinion, may blur your sight </p>
+                        <p>Don’t expect from else, to understand your fight..! </p>
+                        <p>Techniques too old, requires update</p>
+                        <p>Update for success, away from hate…!</p>
+                        <p><strong>BY: Ashish D Rochiramani</strong></p>
+                        Sem: 8th,Civil Engineering ( 4th year) 
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item9">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>09-A hustle stressful Life of Professional!!</h2>
+                        <p>Man! Man! Unhappy man!</p>
+                        <p>Come and see the green’y’ land,</p>
+                        <p>Fully of grains and beautiful narrow lanes,</p>
+                        <p>Love the nature, not the modern man-made land.</p>
+                        <p>Man! Man! Jostle man!</p>
+                        <p>Whole day running everywhere,</p>
+                        <p>In search of pleasure and routine ware,</p>
+                        <p>Come on man, ask the nature what she had spread everywhere.</p>
+                        <p>Man! Man! Filthy man!</p>
+                        <p>Living in the acidic rain,</p>
+                        <p>In the city having no proper drain,</p>
+                        <p>Spoiling flora-fauna on the other hand.</p>
+                        <p>Man! Man! A lot of Stress!</p>
+                        <p>Working every day in the press.</p>
+                        <p>Searching whole day for criminal trace,</p>
+                        <p>Come on man, ask the nature how to get the body rest.</p>
+                        <p><strong> Arpit Jain</strong></p>
+                        <p>(4th Year Civil, GCET)</p>
+                        <p>Follow: @jainarpit001</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item10">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>10-Designing  of  life  by  “GOD”  in  context  with  SHRIMAD  BHAGAVAD  GITA.</h2>
+                        <p>In  bhagavad  Gita  it  is  said  by  the  almighty  God  that  we  humans  are  just  like  puppets  which  are  controlled  by  the  almighty  god.</p>
+                        <p>The  meaning  of  this  sentence  is  normally  taken  in  a  wrong  way  by  people. People  take  the  meaning  of  this  sentence  like, the  god  controls  our  life (Past,Present and Future) so  this  means  that  nothing  is  in  our  control, our  destiny  is  already  written  and  we  cannot  change  it. So  there  is  no  need  to  waste  time  and  energy  by  doing  work  as  it  will  not  change  our  life.</p>
+                        <p>But  this  is  not  true, let  me  explain  this  sentence  with  an  example:-</p>
+                        <p>There  is  a  farmer  which  is  having  many  different  varieties  of  seeds. The  farmer  decided  to  plant  a  seed  but  before  planting  a  seed  he  has  to  first  decide  which  seed  to  plant  first  by  considering  the  pros  and  cons  of  planting  that  seed  at  that  point  of  time,  like  the  climatic  conditions  are  favourable  or  not, by  considering  the  output  fruit  which  he  will  get  as  an  outcome  after  planting  the  seed  etc .Now  by  considering  these  things  he  took  a  decision  to  plant  a  seed  which  grow  into  a  potato  plant  in  future.</p>
+                        <p>Here  to  grow  a  potato  plant  is  a  long  and  hard  process. So  many  things  are  to  be  taken  care  of  like  watering  of  seed  at  regular  intervals  and  in  a  sufficient  amount  of  time, spraying  of  pesticides  ect.  To  get  an  healthy  potato  the  farmer  has  to  make  many  decisions  and  work  towards  those.  Here  the  quality  of  output  depends  on  the  decision  made  by  the  farmer  during  the  growing  process  of  the  plant.</p>
+                        <p>Now  here  which  fruit  (Future)  will  be  grown  by  which  seed  (Choices  made  in  the  present  time)  is  all  decided  by  the  almighty  God  but  see  carefully  in  the  example  that  the  farmer  had  the  chance  to  choose  the  seed  from  various  types  of  seeds.</p>
+                        <p>Same  way  we  are  also  given  chances  by  the  almighty  God  to  make  choices  in  our  life. Every  second  of  our  life  is  dependent  on  the  choice  which  we  make  in  the  past.</p>
+                        <p>So  God  also  says  in  Bhagavad  Gita  that  we  should  do  Karma (decisions  made  in  life + work  done)  but  never  be  stressed  about  the  fruit (Future)  because  in  our  hands  is  only  to  choose  the  seed (Choices  made  in  life)  by  imagining  the  fruit (Future) which  we  may  get  by  choosing  this  seed (Choices  made  in  life)  but  the  fruit (Future)  is  already  determined  by  god  depending  upon  our  everyday  choices  which  we  make  in  present  time.</p>
+                        <p>So  all  is  controlled  by  god  but  he  has  given  us  many  choices  or  paths  on  which  there  is  different  type  of  life  in  future. So  be  conscious  while  taking  decisions  and  do  the  work  accordingly. Don’t  blame  God  for  anything  blame  yourself  because  you  are  responsible  for  your  hardships  in  life.</p>
+                        <p><strong>Chirag  Thakar</strong></p>
+                        <p>2nd  year Mechatronics</p>
+                        <p>Enrollment No.=160110120006</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item11">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>11-Conspiracy theory! </h2>
+                        <p>One way or another we all are aware of what conspiracy theories mean in simple language it is generally one theory explanation involving an illegal or harmful act carried out by government or other powerful actors. And as a matter of fact knowingly or unknowingly curious minds of human beings are attracted towards the mysterious piece of information. But let me tell you the truth before you start reading this conspiracy theory, it is believed that those who possessed deep knowledge of this theory are killed and their deaths have been mysterious one. I am going to talk about a secret society calling itself Illuminati. It is stated that many important world events are being manipulated and handled by this people. In a historical sense, the term "Illuminati"( Latin word which means "enlightened") refers to the Bavarian Illuminati a secret society that operated for only a decade from 1776 to 1785. This organization was found for a good cause itself by Adam Weishaupt, a German law professor who believed strongly in Enlightenment ideals, and sought to promote those ideals among elites. Weishaupt wanted to educate Illuminati members in reason, philanthropy and other secular values so that they could influence political decisions when they came to power. The Illuminate’s goals and reputation often exceeded their means. In its early days, the group was just a handful of people somewhere between 650-2500 members. The group grew to that size by becoming a sort of sleeper cell within other groups - Illuminati members joined Freemason (well, you can Google further what is Freemasonry) lodges to recruit members for their own competing secret societies. Illuminates were closer to revolutionaries than world rulers. There were two sides of Illuminati - their odd rituals and their ideals. The Illuminati did plenty of unusual things like using symbols of owl, adopting pseudonyms to avoid identification and had complicated hierarchies like novice, minerval and Illuminated Minerval that divided the ranks. In the beginning, the order's members had three levers starting from initiate to kings. The Illuminati believe that you can only understand death if you experience it, and in a close encounter that is by undergoing 'samsara', new recruits demonstrate their infinite power, eternal fearlessness, complete knowledge of existence and intellectual curiosity. The initiation process includes ritual of sacrifice, some are extreme and an atrocious myth to kill another human being. Requirement of this initiation process is to prove his true loyalty to the order and beliefs. They believe that the person receives power from a departing spirit so they often sacrifice an animal. The inductee is pointed at a bench, lying on his back, and an animal is placed on top of him. The animal is then killed and let to bleed to death. The blood of the dying animal spills and the inductee and they believe that the blood is what gives power and knowledge. In the world of celebrities, Illuminati, masonry, religion and conspiracies are a daily struggle. That being said, there are number of deaths in the celebrity world that people believe are a result of an Illuminati sacrifices like Bruce Lee, Anna Nicole, Marilyn Monroe, John Lennon, Michael Jackson, etc. Killing someone is not requirement but a miserable myth that forces into belief of killing someone. No one knows if they still exists or not, but surely they have always been a source of attraction to the people.</p>
+                        <p><strong>Helly Patel </strong></p>
+                        <p>
+                           <strong2nd Year Mechatronics>
+                           </strong>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item12">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>12-'Life as we know'</h2>
+                        <p>As desperate as one can get,</p>
+                        <p>Life doesn’t unravel herself as you want.</p>
+                        <p>Life would shock and surprise you,</p>
+                        <p>After all we are her children and…</p>
+                        <p>The least caring thing she might do is </p>
+                        <p>To give you what you wanted.</p>
+                        <p><strong>Keyur Bhatt</strong></p>
+                        <p><strong></strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item13">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>13-'LIFE IS LIKE AN ELEVATOR…….'</h2>
+                        <p>In this huge world many people are born every single minute and even die every single minute .No one is immortal in this world. As said in Bhagwat gita, each and every living thing which takes birth in this world have to die one or the other day. Then comes a crucial question that why people are still trying to fill their own stomach and destroying someone else’s bread and butter? Why this hatred among people and the race for supremacy when everyone knows that they are going to die one day? This race for supremacy goes to such an extent that people are ready to take the life of the other person. </p>
+                        <p>Every person born on this earth have to face up’s and down in their life. Be it be the world’s most intelligent person or the world’s wealthiest person, escaping the downfall is not possible. Everyone’s life is like an elevator .It is influenced by someone or something, be it be , friends, film stars etc. Like an elevator this influence can take you to the top position and also bring you down. The vital part is that how you are influenced by the person is all that matters. If you are influenced by their good habits than it can lead you to the top most position but if it is their bad habits than it can create your downfall. The only crux of the matter is that always remain true to yourself don’t get influenced by bad people, build your own path but not at the cost of others.  </p>
+                        <p>Now comes satisfaction, there is not a single person in this world who is totally satisfied with the work he is doing. Some is doing for the sake of his family, some are doing because they have to repay their debts etc. No one gets everything they want ,everyone has some or the other problems in their life .But always remain calm in your life, always behave politely with others don’t drain your anger on somebody else because you never know what he might be facing in his life.</p>
+                        <p>Always be happy in your life, face every situation with a smile on your face. If you are not able to encourage anyone don’t encourage  but at least don’t discourage anyone. The last thing I want to tell is that don’t ever harm anyone in any way because giving someone pain will eventually bring you pain as the law of karma says that .</p>
+                        <p><strong>Yash jadhav</strong></p>
+                        <p><strong></strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item14">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>14-'Life…'</h2>
+                        <p>From the sands he emerged,</p>
+                        <p>To a world where his life got divulged.</p>
+                        <p>Just a wanderer to the world, isolated from the feelings,</p>
+                        <p>No matter how harsh the pain, always followed by the healings.</p>
+                        <p>No worries of the world,</p>
+                        <p>His presence is more expensive than gold.</p>
+                        <p>Then he grows, he learns, and his life starts to transform,</p>
+                        <p>The point where his psyche commences to form.</p>
+                        <p>This gives him either love or hatred,</p>
+                        <p>That paints his character either black or red</p>
+                        <p>heir runs on his pursuit of happiness,</p>
+                        <p>Only the adamant will survive all its dizziness.</p>
+                        <p>And the rest remains wanderer to the course of their life,</p>
+                        <p>Feeling regret for their life full of gaffe.</p>
+                        <p>And then he chooses either to sleep or to survive,</p>
+                        <p>And fights till the victory thrive.</p>
+                        <p>And then he waits to rest on noble lands,</p>
+                        <p>Where his soul and the sand completely blends.</p>
+                        <p><strong>-Brijesh A. Wala</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item15">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>15-'MOUNTAINS'</h2>
+                        <p>loosing up all the strain,</p>
+                        <p>out of that jaded brain,</p>
+                        <p>peace is what I gain,</p>
+                        <p>and not at all in vain,</p>
+                        <p>being in the lap of a mountain.</p>
+                        <p>To unveil the colors of nature here I go,</p>
+                        <p>A bit fast and a lot slow</p>
+                        <p>To the place where sun and clouds greet,</p>
+                        <p>And the sound of birds chirping so sweet</p>
+                        <p>To explore the beauty of that endless sky,</p>
+                        <p>And that constant desire to fly!</p>
+                        <p>Giving me the hope to at least try,</p>
+                        <p>By being on the mountains towering so high.</p>
+                        <p><strong>Jainil Parikh</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item16">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>16-'Bridging of life and death'</h2>
+                        <p>I hope that someday, I understand </p>
+                        <p>What is the bridging of life and death !</p>
+                        <p>The pyscology associated with it is a </p>
+                        <p>Jumbled blend of logic, magic and tricky math !</p>
+                        <p>If destined to die,  why do we live? </p>
+                        <p>If meant to live, why do we die? </p>
+                        <p>If death prioritizes the entire living</p>
+                        <p>world, is life only a bushy lie? </p>
+                        <p>The journey of a person involves his duties and </p>
+                        <p>his joyous pleasures followed by his decaying physical soul !</p>
+                        <p>Spirituality, science...everything fails before the wrath</p>
+                        <p>Of the cloak of death, he is the whole </p>
+                        <p>If life is just the summoned beauty we endear</p>
+                        <p>Why do we survive and not lived </p>
+                        <p>Amongst the shattered fabric of the divine </p>
+                        <p>Human life,  let the magic of philanthropy be weaved !</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item17">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>17-'Why Reading Makes You a Better Writer'</h2>
+                        <p>I’ve been an avid reader since childhood, and I would submit that most good (and especially great) writers could say the same. What we probably didn’t realize was that our trips into the fantasy worlds of these books were actually training us for our future careers. I’m glad I didn’t know — it might have taken a bit of the joy out of it.</p>
+                        <p>Read can be pure joy, if you’re reading a good book. By that, I don’t mean good literature — I mean anything that captures your imagination, that compels you to read more, that tells you a good story, that creates wonderful characters, that builds new worlds.</p>
+                        <p>But beyond reading for pleasure, a good writer also reads with an eye for the writing. Maybe not all the time, but at least some of the time. And many times that writer doesn’t even realize he’s doing it.</p>
+                        <p>What we learn as readers, we use as writers. Maybe we don’t always do the best job at putting that knowledge to use, but that just takes practice. Over time, our writing becomes in some ways a compilation of all the things we’ve learned as readers, blended together in our own unique recipe.</p>
+                        <p><strong>-Saloni Parashar</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item18">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>18-'Real Friendship'</h2>
+                        <p>You are thinking that why I have written this title because nowadays in this age of social media, the possibilities to reach and connect with people across the world have multiplied in an unprecedented manner. Add friends at the click of a button, keep them updated with your latest tweets. The networking options are almost limitless. As the number of our virtual friends and followers multiply, have you ever wondered, how much of it is really “real”? What does real friendship actually mean to you?</p>
+                        <p> "Real friendship", The word is very heart touching. We have many friends, many followers in social media ,but hardly we are attached with few of them. All that friends are virtual but in our life there are few people with whom you can share your problems, your lives, thoughts, feelings and frustration. They are very important for you. We are able to share any secret with them because we trust them blindly. Faithfulness and loyalty are key of real friendship. We encourage each other, we forgive each other for mistakes. We insult each other but we love each other. Our life is nothing without them. They say bad things on your face but they say your good things behind you. They are always with you when the world walks out and that is "Real Friendship". Real friendship is that ship that never drown.</p>
+                        <p>All friends are important in our life. Having friends is blessing. Love you all my friends.</p>
+                        <p><strong>Shreya Patel</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item19">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>19-'RESTART'</h2>
+                        <p>“Writers emote with ink”, Robert sir, my very first literature teacher, taught. Hardly did he know that his words would trap an 8 year old between the alphabet and punctuations. Mere letters when put together could form words, in numbers so enormous, that never could a man learn all of them in one lifetime- I was amused, I still am. A word as compact as L-O-V-E could contain a feeling that not even hearts can, it overruns through eyes- I was learning, I still am.</p>
+                        <p>As the ink through my pen trickled today, inconsistently, a tear rolled down my cheek, slowly, as to make me notice its warm existence and then rapidly evaporated, leaving me abruptly with chills. Baffled. Am I not supposed to emote with ink? Why is it that I can ink everyone, but you? I think of you. I write. I weep. I repeat! Why? I realize, ink can never suffice the memory of you, the memory of us.</p>
+                        <p>strengthening me pillar by pillar. If I could live, despite her leaving- I can do anything. As you reinforce the human that I am, you weaken the writer in me. Because of you, I write better now, still, the ink It has been 1 year and 8 months since you left. Yet, your memories visit every day, struggles its way out through the nib when I recall you. How am I a writer when I cannot even express the very reason of my writing? Perhaps, I am not. Perhaps, I am just another shapeless soul that could expand through space of thoughts and confine into a dot when put into a vocabular-vacuum. Perhaps, I am just that spirit which wishes to immortalize you in its words and ultimately, meet you up in the clouds- to live it all over again, to restart.</p>
+                        <p>(IN THE MEMORY OF MY BELOVED, DADI)</p>
+                        <p><strong>--Shivangi Shah</strong></p>
+                        <p><strong>   2nd Year Mechanical Department</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item20">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>20-'Rhnull, The Rarest Blood Type On Earth, Has Been Called The "Golden Blood"'</h2>
+                        <p>There are eight common blood types. Keyword there? Common. If what you know about blood stops right around there, then this is all going to escalate very quickly. There are literally millions of varieties of blood types, and the rarest one is shared by fewer than 45 people on Earth. Talk about exclusive.</p>
+                        <p>Easy As A, B, O</p>
+                        <p>The ins and outs of blood types is way more complicated than you probably want it to be (or maybe that's just us?), but here's a relatively quick crash course. We are filled with red blood cells that carry oxygen through our bodies. Antigens cover these cells like sprinkles on a donut. The semblance of antigens on your red blood cells are like little name-tags that tell your body, "Hi, I go here," to which your antibodies respond, "Nice! The rest of us won't attack you." Your white blood cells latch onto these antigens to act as a shield against infection.</p>
+                        <p>The two main antigens are A and B. The kind you have are determined by the alleles (gene variants) given to you by your parents. A and B are dominant, while O (which does not have a corresponding antigen) is recessive. Then, in a different group, there's the Rhesus D antigen, which gives us all the positive/negative stuff. For whatever reason, it's called the Rh factor. Positive blood has the Rh factor (it contains the D antigen), and negative types lack it. Easy enough. There are 35 blood type groups recognized by the International Society of Blood Transfusion, but for simplicity sake, most people only really need to know about the two most important ones: ABO and the Rhesus D system.</p>
+                        <p>
+                           If the 35 blood type groups didn't throw you, now is where it gets even hairier. There are hundreds of different antigens, and they fall into 33 recognized antigen systems. These don't all really get talked about because, for example, more than 99.9 percent of people carry the antigen Vel. Tagging a Vel onto the end of your blood type (i.e. ABVel+) would probably just be redundant. Not simplifying your blood type would kind of be like telling a really boring story with all the unnecessary and obvious details included. Just get to the good stuff, please, we can assume the rest.
+                        </p>
+                        <p>There's Rare, Then There's Rhare</p>
+                        <p>After the eight common blood types, we've got a few unicorns. Something like 160 of the 342 blood group antigens are high-prevalence, which means most people have them on their red blood cells. If you lack an antigen that 99 percent of people have, then your blood is considered rare. If you lack one that 99.99 percent of people have, then congratulations, you're Spiderman. Just kidding, probably.</p>
+                        <p>The rarest blood type in existence is Rhnull blood. This stuff is characterized by a complete lack of antigens in the Rh system, which is the largest blood group system. This includes the D antigen (Rh factor, baby), plus the other 50-something antigens in the group. This blood type is so rare that only 43 people on Earth have ever been reported to have it, and there are only nine active donors. Until 1961, doctors assumed a person lacking all Rh antigens would never even make it out of the womb alive. "It's the golden blood," Dr. Thierry Peyrard, Director of the National Immunohematology Reference Laboratory in Paris, told Mosaic.</p>
+                        <p>Besides making someone feel really special, Rhnull or other rare bloods are extremely valuable. "Because Rhnull blood can be considered 'universal' blood for anyone with rare blood types within the Rh system, its life-saving capability is enormous. As such, it's also highly prized by doctors – although it will be given to patients only in extreme circumstances, and after very careful consideration, because it may be nigh on impossible to replace," Mosaic reports.</p>
+                        <p>Reference :  curiosity.com</p>
+                        <p><strong>Shreyansh Patel</strong></p>
+                        <p><strong>150110111041 EC 3 rd  YEAR</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item21">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>21-'Ride in a metro'</h2>
+                        <p>Rahul Agarwal , an ambitious man of 28 years was travelling in Metro train from Connaught Place to Nizamuddin,in Delhi. He was a hardworking person who believed that the only way to go ahead in life is through hard work and craftiness. He also believed in luck factor only because he had experienced it in past. He hated travelling in metro because it was too congested and he hated that people rubbed their bodies against him as they struggled to stay comfortably in the train. ‘The biggest disadvantage of the metro is that the doors close and fresh air is not able to come in which is a problem because the air conditioning had stopped working ‘, he thought. He looked around him and saw a guy who was sitting with his legs cramped up,a woman who was feeding her child, few techies who were talking about new investments which were coming up in the field of information technologies...few thousand crore investment in the NCR. However, what amazed him and moved him the most was a particular fragrance, a very specific fragnance, which he had smelt a long time back. It was the smell of Claire-De –Lune, an expensive brand of perfume. His girlfriend used to wear it. His thoughts etched back to her. He hadn’t seen her since they had broke up,nor had he heard of her. But the smell was strong and he was free so his thoughts etched back to her. He remembered how they met for the first time, the shyness which changed to love within a few months and love which changed back into nothing within a few years.  She was very beautiful. Black eyes, dark hair upto shoulder, chubby cheeks, oval face ,thin lips and a strong, well built figure. She was very caring and kind hearted. He loved talking to her and so did she, or so he felt. Besides, she was very rich  After being in a relationship for a few years he asked for her hand. However, she gave him a thumbs down saying that she was not interested in all those things and she wanted to live as free bird.  He was aghast and tried to reason with her but he stood no chance against her bossy nature. Finally he gave up and went home thinking only about how he would work his way all up to corporate ladder and earn a lot. The lady who was wearing the perfume was thin, frail and weak looking.  She had her back turned to him so he couldn’t  see her face. She had a scarf on so he wasn’t able to see her hair. She looked nothing like his ex. The train halted and the board flashed, Nizamuddin station. “Come Sheetal ,lets go”, a girl said.’Sheetal, it was her name, but it couldn’t be she ...she was gone..why did she come back.....’ he thought. “Excuse me, Excuse me, let me through, careful there, let us through, my sister is a cancer patient, let us through, no pushing..Excuse me..”, the girl said. Everyone moved aside. Humanity still lives when it sees someone suffering and they have to do nothing except move a bit to help them through. “Stage 2 cancer, it seems “, the guy who had his legs cramped up said to Rahul. He was a medical student. “Just takes a few years to spread. Stage one itself is quite painful..and to think about stage 2”, he grimaced. Rahul seemed unfazed. He got out through the next door and thought,” Serves her right for not accepting my proposal. But it’s good she didn’t. I would have wasted my hard earned money on her treatment and would have got nothing except a frail,old woman who would be of no use to me. I am a young man”.</p>
+                        <p>“Didi, did you see him? It was him..Rahul..He seemed fine!”, the girl exclaimed.</p>
+                        <p>“Yes I saw him.  I hope he is happy. I rejected him that night because I was diagnosed with cancer in the day. I just hope that my no makes him happy. It would be heartbreaking so see him suffering because of me. I really love him, you see.”, Sheetal said slowly.</p>
+                        <p>The girl gasped. Her sister had never spoken about him in last two years, those two years when she battled with cancer.</p>
+                        <p><strong>Dhanvin yagnik</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item22">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>22-'Section 377 of the Indian Penal Code'</h2>
+                        <p>Section 377 of Indian constitution reads:</p>
+                        <p>“Unnatural offences: Whoever voluntarily has carnal intercourse against the order of nature with any man, woman or animal shall be punished with imprisonment for life, or with imprisonment of either description for term which may extend to ten years, and shall also be liable to fine.”</p>
+                        <p>In simple words, the section makes physical relation between two consenting adults of the same sex a punishable offence. Homosexuality is not a defect, disease or disorder, it is natural and not only does it exist in human being, but there are more than 20 species, other than human, that are known to exhibit homosexual behaviour. Something that is naturally found even in animal since time immemorial is being termed as unnatural in a so called liberal 21st century. Indian society though modernizing, have traditions and beliefs firmly following old Indian cultures most of these view homosexuality as against scriptures and practices.  </p>
+                        <p>I don’t think nobody has given a right to anybody to decide or question what one wants to do or one can do. In this 70th year of independence ,many people have the right to celebrate independence as they do not have any control over their life. on one hand constitution provides the right equal irrespective of sex, caste, class etc on the other hand it takes away the basic right to love a person and be a with a person one wants to be irrespective of sex, caste, class etc. </p>
+                        <p>Do you think  one has the right to tell anyone what to do and whom one should choose to be with? Don’t you think it’s ones  personal choice? </p>
+                        <p><strong>-saloni   parashar</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item23">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>23-'Silence vs. Inner Peace'</h2>
+                        <p>Silence has filled up my life,</p>
+                        <p>Its lot noisier than the world outside.</p>
+                        <p>I thought silence would be beautiful,</p>
+                        <p>Would give me more peace to sort my thoughts and see through.</p>
+                        <p>But it brought out chaos in my thoughts,</p>
+                        <p>Confusing as it is, made it tough to ignore.</p>
+                        <p>And now I know I want inner peace, & not the world to drop dead and cease.</p>
+                        <p>My isolation didn’t help me in any way,</p>
+                        <p>Brought out more emptiness than happiness it can.</p>
+                        <p>So get outside, find out a reason to live,</p>
+                        <p>Otherwise everything would remain just a dream.</p>
+                        <p>I wrote this because I know many of us confuse silence, isolation, introversion similar to peace which by the way are not same. We all seek inner peace and it is symbolized by silence. This symbolic silence is about the emptiness of human mind and not the physical absence of sound.</p>
+                        <p>Sitting quietly and not interacting with anyone can help you for a short period of time but for long-term this might be dangerous. Human as a species only exist because of its socialism. We interact with each other, we depend on each other and so on</p>
+                        <p>Find a reason or a thing that can give you true peace, because isolation would definitely not provide you with what you need.</p>
+                        <p><strong>Keyur bhatt</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item24">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>24-Socrates in the New World   </h2>
+                        <p>Born with a silver spoon on a brass platter, to a not so affluent merchant father and a theatre empress in the mid-20s and was named Socrates by the mother. Living in a rugged house of cobbled stones and a fireplace to sit by along the countryside with a courtyard for barbeque in the muddy bog, he grew up to become a wanderer. Playing with the pony and the cattle in the neighbor’s farm, he grew up thinking of vivid fantasies right from the farm to the lightning and thunder-struck stars across the galaxy, a billion light-years away. It was a satire for the merchant to look up his son grew like the Walter-Mitty living up in this world created by his very own imagination and dramatic thoughts. Sweats full of colorful dew drops in the playgrounds of water were his yard for leisure.  He seemed to enjoy this way of being and living different fantasies.</p>
+                        <p>Growing up as a vagrant, he knew nothing still venturing harder and faster to find out new hopes every day. Budding tall and husky with a muscular craving with the black beard and so-called an Arabic look, he charmed and blazed along the streets of the wonderland. Inspired by Hercules, the Roman god and a very own hero of the community, he protected and secluded the boulevard with his valor, hounding against the injustice. Liked by many and hated by plenty, Socrates was fearless and making his stand count. Yet, adored by the charming girls, he was just fascinated by a one with the green eyes. She, the chunky figured was with the smooth apparels and green eyes without a frown lured the Socrates more into the fantasy of the Elizabethan era when the Shakespeare was prominent. Climbing the uphill in the sunlit seasoned meadows with hands in hands was their routine with an eventual kiss in the midway. The green-eyed stirred him into the world of books and making his fantasies more flamboyant and lustrous. He became restless days after weeks and dreamt lucid and demanding to live in poles apart fantasies, from the Apollo Mission Spacecraft to the Nazi’s Bunker and flipside to the Aztec’s temples and a house on the Baker Street were now his new homes. Once known by no one but now is known by the beloved green-eyed.</p>
+                        <p>The Arabic was no more a teenager and so were his fantasies. They grew once from the roots and now were the trees of Zeus. He craved and imagined more than ever before. He was a cerebral figure among the others yet too sluggish to do anything. Making him a bonehead yet that was an irony. Influenced by science, he flourished in his very own skills. Though, the university path was haunted to him and academics a nightmare thus lived one more fantasy. Tedium surrounded by boredom chased him on to the university grounds. Barely tolerate anymore with the skills of Da Vinci and the mind of the very individual Einstein he ventured into the unknowns like the Columbus in the wild fierce ocean to discover a fantasy far higher than the reality. Sailing the seas and drifting over the asphalt, he lurched towards the windy hills with his beloved getting old and grey. Still, he was restless like never before. Times flying, yet it was still tough for Socrates to cope up with the reality. With the advent of twilight, he learned something. The music connected him with his soul. Days passed and he learned piano and the santur and the violin. Fluent in music, he played and saw the rhyming notes flying all around his mind with a lit smoke and he thought of planets revolving in an elliptical fashion. He inspired the music to his beloved and became an ideal and enviable teacher for her.</p>
+                        <p>Years passed and now in the new era, where there is always a concern for existence, Socrates did nothing but lived in a dissimilar world created by him. He saw a ray of hope for one more fantasy. He started writing miles and miles of pages of his philosophies and occurrence of living numerous fantasies every day. Old and grey, he started teaching children enthusiastically and creating Plato and then the Aristotle and indeed Alexander the Great once again in this modern era through his very own ideologies. In his later life, he lived like a monk to recognize the reality. On his deathbed, Socrates with gigantic white whiskers and beard with long hairs with the face full of wrinkles and a lean and feeble body, he was wiser than ever before like King Solomon. Not a moment of restlessness. Yet all alone as he realized everything was just a mere fantasy counting his green-eyed beloved.  With a flash, Socrates was no more and all his fantasies nowhere to be found ever. </p>
+                        <p><strong>Devansh Mistry</strong></p>
+                        <p><strong>   (3rd year Mechatronics)</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item25">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>25-TAME THE OCEAN OF MY MIND   </h2>
+                        <p>With a sight so long,</p>
+                        <p>I embark on my journey</p>
+                        <p>They think I am not strong</p>
+                        <p>That, I might get entangled in tyranny.</p>
+                        <p>But life is one, it must go on.</p>
+                        <p>Whatever the differences, whatever the bonds.</p>
+                        <p>The beauty of my dreams</p>
+                        <p>and the passion in my heart</p>
+                        <p>It’s precious.</p>
+                        <p>No one can grab its hold,</p>
+                        <p>till there resides wonder in my soul.</p>
+                        <p>And I daresay,</p>
+                        <p>There would be another dull start to another fine day</p>
+                        <p>But an opening of sorts will finally find its way.</p>
+                        <p>The rays of hope, the resolve in my eyes</p>
+                        <p>will illuminate me from within.</p>
+                        <p>And I will continue my life</p>
+                        <p>with a clock beside me ticking.</p>
+                        <p>Now here I am at the cross roads,</p>
+                        <p>with a gleam in my eyes,</p>
+                        <p>to conquer the cosmos</p>
+                        <p>I finally take my first step forward</p>
+                        <p>pertinacious, determined</p>
+                        <p>a sailor set out to tame the ocean of her kind</p>
+                        <p><strong>Sagarika Das</strong></p>
+                        <p>Mechanical Department,First year</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item26">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>26-THAT LAST BENCHER </h2>
+                        <p>Respected sir,</p>
+                        <p> It’s me. Didn’t recognise me? It’s okay. I never occupied that first bench to get your attention either. I never gave you my expensive pens and not asking for it later. I never conveyed your message to other staff members ever. I was bound to be unrecognized. Or should I say, I was never allowed to be recognized.</p>
+                        <p>The academic session began with that first lecture when you came up and asked to introduce ourselves along with the “PERCENTAGE’ we passed out with. Henceforth, I learned to judge people by their academic capability. Not to mention, your changes in gesture towards students according to their marks. That “IMPRESSIVE” look to the 90 % guy and that “GOOD FOR NOTHING” look to the student with 60%. If only you had considered to ask them what other thing they were good at.</p>
+                        <p>Then came the time when you are supposed to make us sit because of course, we are too niche to decide what’s our best position to sit and you better than anyone knew the right bench we deserved. If you have not known by now, I was made to sit in the last bench because, myself 50% but I am good in…</p>
+                        <p>Never mind doesn’t matter.</p>
+                        <p>You taught us since the beginning that education is important. Education as in history, science and maths you meant. Not that sports, arts and literature. That is just for the sake of our extra-curricular activity right? And probably when the annual function takes place. For the rest of the year, we are just last benchers.</p>
+                        <p>By the time, I somehow managed to reach up to the level of your expectations, you said maybe I was trying too hard on my brains and should just focus in getting the passing marks. My simple perception on achieving knowledge outside the books was hence nullified by your fact that it can get me nothing. Apart from the other taunts, I decided to not let it get under m skin. </p>
+                        <p>“Your kid is a loner. Tell him to sit along with the first benchers so that he can get a little help”Those were the words that came out of your mouth during the parents-teacher counselling. But obviously, you wouldn’t tell them that making me sit on the last bench was indeed your idea in the first place. And hence, it was finally shoved down to my throat that my love for writing won’t get me far enough but an A+ on my report card would do. I had to give up on my diary and had to switch it with the assignment book. Not that I was never ever interested in  studies but making me do that at the expense of my passion somehow made me lose interest in it. I finally ended up studying. And fortunately scored decent too. Of course, not well enough in your eyes but will do.</p>
+                        <p>So few years from now, I decided to take up a stream where I can secure myself with a good future. And as for writing, it can be done anytime right?</p>
+                        <p> Maybe, after school, or after graduation, or after getting a job? Okay after settling down? Oh come on, are you still a kid that you need to own a diary and write down stuffs that comes in your mind? You should have done it when you were younger.</p>
+                        <p>Sir, your education system made me quit that extra-curricular activity and now the society asks me why I didn’t do it at that time.</p>
+                        <p>Yet, I am still trying to justify my degree which wasn’t even my own choice in the beginning. And what about writing? Well, not a diary anymore but the writings somehow found its place in the trash folder in MY COMPUTER.</p>
+                        <p>Yours respectfully,</p>
+                        <p>Back Bencher</p>
+                        <p><strong>Kaustubh Paira</strong></p>
+                     </div>
+                  </div>
+               </div>
+               -------------------
+               <div class="bb-item" id="item27">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>27-The Big Question Mark </h2>
+                        <p>We live in the age of pure assumptions and a place where you are not confident about your own self. This is an era of<b> "Fake Belongingness", "Fake Sympathy", "Fake Affection" </b>and what not! Humanity is endangered amongst us. It is infected by egocentric humans playing imitation games and running away from the reality and truth has become a scarce resource. Everyone believes in supremacy, they want themselves to be followed and identified by others with a domineering state where the powerless shall succumb. We are incarcerated in the era where fake is more accepted and enlightened because of the fact that it is pleasing to hear and digest. But the reality says that human race is pulling each other towards dolour on the name of <b>"Survival"</b>.</p>
+                        <p>However, some people still believe in good deeds and selfless acts, even though they get hurt, broken, or even torn but still they believe in helping others. They are the ones who promote the trust in humanity and kindness. Such benevolent people are significant for the mankind.</p>
+                        <p>We are considered to be the social animals and yet we prefer solitude, because the generation is undergoing some serious trust issues. The world, though, socially connected by technology, is separated by the political game of survival!</p>
+                        <p> The human behaviour is situational camouflaged and thus the sceptical <b>“Mystery of Humans"</b> will remain a big Question Mark...</p>
+                        <p><strong>Harsh shah</strong></p>
+                        <p>Final Year Civil Dept.</p>
+                     </div>
+                  </div>
+               </div>
+               -----------------
+               <div class="bb-item" id="item28">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>28-Wanna be child </h2>
+                        <p> Sometimes my heart wants to go back</p>
+                        <p>Rewinding everything in a flashback</p>
+                        <p>When I was a child totally carefree</p>
+                        <p>Playing with flowers and hanging with tree</p>
+                        <p>Don’t know what’s wrong  don’t  know  what’s right</p>
+                        <p>Everything is beautiful-said my sight</p>
+                        <p>A mind totally pure and innocent was heart</p>
+                        <p>Drawing on the walls used to be an art</p>
+                        <p>When stars was just a shining thing not an eg of hetro nuclear fusion</p>
+                        <p>When car and bike were just a playing thing not source of air pollution</p>
+                        <p>Neither tension of marks nor of scoring</p>
+                        <p>Used to play below the sky because tv was boring</p>
+                        <p>My world was so fine I so fit</p>
+                        <p>No restrictions, no bans & no limits</p>
+                        <p>My world was my neighbor, friends and of course my mom and dad</p>
+                        <p>Oh god what a great difference I can see in today’s life and life I had</p>
+                        <p>No cheats no bully and no dirty mind</p>
+                        <p>Searched that peace everywhere…but oops…I can’t find</p>
+                        <p>When I used to live my life just for me</p>
+                        <p>Not to impress anyone or to make others see</p>
+                        <p>A world free from fear,… free from guilt and free from pain</p>
+                        <p>Oh god sometimes my heart cries to be a child again……</p>
+                        <p>A child again……a child again…..</p>
+                        <p><strong>Sayoni Mukherjee</strong></p>
+                     </div>
+                  </div>
+               </div>
+               ---------
+               <div class="bb-item" id="item29">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>29-Warrior </h2>
+                        <p> Her eyes were magnificent</p>
+                        <p>Her face, a cliché of colours of life</p>
+                        <p>She beholds her beauty</p>
+                        <p>Like she owns fearless mind.</p>
+                        <p>Her boldness was applauded</p>
+                        <p>Her acts were furious</p>
+                        <p>No one ever came to though</p>
+                        <p>A warrior can be so gorgeous!!</p>
+                        <p>No ego trip she besoin</p>
+                        <p>No prix could define her</p>
+                        <p>‘coz she knew she was meant for war</p>
+                        <p>‘coz she was her own kind of soul!!</p>
+                        <p>Now this mortal warrior</p>
+                        <p>Rests in peace amidst forests</p>
+                        <p>Her body revealing great stories</p>
+                        <p>Her face singing loud her glories. </p>
+                        <p><strong>_Riva Vaishnani</strong></p>
+                        <p>3rd year, CP</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item" id="item30">
+                  <div class="content">
+                     <div class="scroller">
+                        <h2>30-Writeups</h2>LOVE-
+                        <p><b>1)	Topic- LOVE</b></p>
+                        <p>-Those never ending night cognition about you, Time when you are asleep and I adore you sleeping.</p>
+                        <p>Oh, love! You are so generous to me.</p>
+                        <p>-She is the poison, I want to die for</p>
+                        <p>She is the light, I want to shine with!</p>
+                        <p>She is the antinome to my negativity!</p>
+                        <p>She is “The better half of my life”.</p>
+                        <p>Yes, “SHE” exist!
+                        <p>-In the world of fluctuations, she is my infinity!</p>
+                        <p><b>2) Topic- LIFE</b></p>
+                        <p>-It’s okay if your bundle of comrades is not bulky. Because they say, you get acquainted with those who have congruent anticipation. #odd_truth</p>
+                        <p><b>3) Topic- Loneliness</b></p>
+                        <p>     - A broken piece of glass can cut you deep, Imagine what a broken heart is “Au fait” of!!</p>
+                        <p><b>4) Topic- Hatred </b></p>
+                        <p>- We were born dauntless, then why people act fictitious?!</p>
+                        <p><b>5) Topic- LIFE</b></p>
+                        <p>-World seems to be penurious, said one nasty episode of life!!</p>
+                        <p>-I want to run like a Cervine, with the mind of a Griffin!</p>
+                        <p>-Obsessed with Improvement, From Gazelle to a lion!</p>
+                        <p>-Pain is just an illusion, choice is yours, whether to make it feasible or keep it imaginary!</p>
+                        <p>-reason why only 1% succeed, You believe in sleep more than you believe in grinding.</p>
+                        <p><strong>Premal Amin</strong></p>
+                     </div>
+                  </div>
+               </div>
+			
+			
+			<div class="bb-item" id="item30">
+                  <div class="content">
+                     <div class="scroller">
+                        hhhhjhpvsfgfsgdsfgdfsgsfdgsfdgsdgsfdg
+                     </div>
+                  </div>
+               </div>
+			
+			
+            </div>
+            <nav>
+               <span id="bb-nav-prev">&larr;</span>
+               <span id="bb-nav-next">&rarr;</span>
+            </nav>
+         </div>
+      </div>
+      <!-- /container -->
+      <script src="js/jquery-2.1.1.min.js"></script>
+      <script src="js/jquery.mousewheel.js"></script>
+      <script src="js/jquery.jscrollpane.min.js"></script>
+      <script src="js/jquerypp.custom.js"></script>
+      <script src="js/jquery.bookblock.js"></script>
+      <script src="js/page.js"></script>
+      <script>
+         $(function() {
+         Page.init();
+         });
+      </script>
+   </body>
+</html>
